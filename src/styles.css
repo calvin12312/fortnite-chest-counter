@@ -1,0 +1,161 @@
+/* Chest Counter theme: deep blue with a yellow accent. Fonts are self-hosted via @fontsource
+   (latin subset only); no CDN requests. */
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource/luckiest-guy/latin-400.css';
+@import '@fontsource/barlow-condensed/latin-600.css';
+@import '@fontsource/barlow-condensed/latin-700.css';
+@import '@fontsource/barlow-condensed/latin-800.css';
+@import '@fontsource/barlow-condensed/latin-700-italic.css';
+@import '@fontsource/barlow-condensed/latin-800-italic.css';
+@import '@fontsource/barlow/latin-500.css';
+@import '@fontsource/barlow/latin-600.css';
+
+@custom-variant dark (&:is(.dark *));
+
+html[data-design-theme='fn'],
+[data-design-theme='fn'] {
+  --background: #0a1f6b;
+  --foreground: #ffffff;
+  --card: #0e2a86;
+  --card-foreground: #ffffff;
+  --popover: #0e2a86;
+  --popover-foreground: #ffffff;
+  --primary: #ffe81a;
+  --primary-foreground: #050d33;
+  --secondary: #1557d6;
+  --secondary-foreground: #ffffff;
+  --muted: #123199;
+  --muted-foreground: #b9d3ff;
+  --accent: #4aa3ff33;
+  --accent-foreground: #ffffff;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #050d33;
+  --border: #4aa3ff66;
+  --input: #4aa3ff66;
+  --ring: #ffe81a;
+  --chart-1: #2fb4ff;
+  --chart-2: #5fc41f;
+  --chart-3: #ff9a2e;
+  --chart-4: #b45cff;
+  --chart-5: #ffe81a;
+  --sidebar: #0e2a86;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffe81a;
+  --sidebar-primary-foreground: #050d33;
+  --sidebar-accent: #4aa3ff33;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #4aa3ff66;
+  --sidebar-ring: #ffe81a;
+  --success: #5fc41f;
+  --success-foreground: #050d33;
+  --success-muted: #123a4a;
+  --warning: #ffe81a;
+  --warning-foreground: #050d33;
+  --warning-muted: #3a3a40;
+  --error: #ff6b6b;
+  --error-foreground: #050d33;
+  --error-muted: #3a1f4a;
+  --icon-blue: #2f8bff;
+  --icon-cyan: #2fb4ff;
+  --icon-gray: #b9d3ff;
+  --icon-green: #5fc41f;
+  --icon-orange: #ff9a2e;
+  --icon-pink: #ff7ac6;
+  --icon-purple: #b45cff;
+  --icon-red: #ff6b6b;
+  --icon-teal: #2fd4c0;
+  --icon-yellow: #ffe81a;
+  --gradient-page: radial-gradient(
+    120% 80% at 50% 0%,
+    #2f8bff 0%,
+    #1557d6 45%,
+    #0a1f6b 100%
+  );
+  --gradient-surface: linear-gradient(
+    180deg,
+    #123199 0%,
+    #0e2a86 30%,
+    #0a1f6b 100%
+  );
+  --gradient-accent: linear-gradient(135deg, #ffe81a 0%, #ff9a2e 100%);
+  --duration-fast: 100ms;
+  --duration-medium: 250ms;
+  --duration-slow: 600ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.25);
+  --radius: 6px;
+  --radius-inner: 4px;
+  --radius-element: 6px;
+  --radius-container: 10px;
+  --radius-page: 14px;
+  --radius-full: 999px;
+  --shadow-low: 0 2px 0 #050d33;
+  --shadow-med: 0 4px 0 #050d33;
+  --shadow-high: 0 8px 0 #050d33;
+  --app-font-sans: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif-display:
+    'Luckiest Guy', 'Barlow Condensed', Impact, system-ui, sans-serif;
+  --font-mono:
+    'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SFMono-Regular',
+    Consolas, monospace;
+  --fn-sky: #2f8bff;
+  --fn-blue: #1557d6;
+  --fn-deep: #0a1f6b;
+  --fn-ink: #050d33;
+  --fn-panel: #0e2a86;
+  --fn-line: #4aa3ff;
+  --fn-yellow: #ffe81a;
+  --fn-yellow-d: #d99a00;
+  --fn-mute: #b9d3ff;
+  --fn-uncommon: #5fc41f;
+  --fn-rare: #2fb4ff;
+  --fn-epic: #b45cff;
+  --fn-legendary: #ff9a2e;
+  --fn-display: 'Luckiest Guy', 'Barlow Condensed', Impact, sans-serif;
+  --fn-cond: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --fn-body: 'Barlow', system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--font-serif-display);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Tailwind v4 dropped the pointer cursor on buttons; bring it back for
+     anything clickable (disabled buttons keep the default cursor). */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+}
