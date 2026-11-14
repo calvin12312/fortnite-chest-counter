@@ -1,7 +1,7 @@
 import { chest_footer_disclaimer } from '@/messages';
 
 const SITE_URL = 'https://chestcounterfn.com';
-const REPO_URL = 'https://github.com/SXGC/fortnite-chest-counter';
+const REPO_URL = 'https://github.com/calvin12312/fortnite-chest-counter';
 
 export function ChestFooter() {
   return (
